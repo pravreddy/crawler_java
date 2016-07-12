@@ -1,8 +1,7 @@
 # Crawler
 
 [![Build Status](https://travis-ci.org/pravreddy/crawler_java.svg)](https://travis-ci.org/pravreddy/crawler_java)
-[![Coverage Status](https://coveralls.io/repos/pravreddy/crawler_java/badge.png?branch=master)]
-(https://coveralls.io/r/pravreddy/crawler_java?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/pravreddy/crawler_java/badge.svg?branch=master)](https://coveralls.io/github/pravreddy/crawler_java?branch=master)
 
 
 About crawler
