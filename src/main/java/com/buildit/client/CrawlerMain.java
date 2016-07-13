@@ -19,19 +19,16 @@ public class CrawlerMain {
 
         JsoupConnection jsoupConnection = new JsoupConnection();
         Crawler crawler = new Crawler(jsoupConnection);
-        try {
-            Map<String,List<String>> siteMap= crawler.getSiteMap(URL);
-            for (Map.Entry<String, List<String>> entry : siteMap.entrySet()) {
-                System.out.println("Parent URL : " + entry.getKey());
-                System.out.println("Child URLS:");
-                for(String url :entry.getValue())
-                {
-                    System.out.println(url);
-                }
+
+        Map<String,List<String>> siteMap= crawler.getSiteMap(URL);
+        for (Map.Entry<String, List<String>> entry : siteMap.entrySet()) {
+            System.out.println("Parent URL : " + entry.getKey());
+            System.out.println("Child URLS:");
+            for(String url :entry.getValue())
+            {
+                System.out.println(url);
             }
-        }catch (Exception e)
-        {
-            System.out.println(e.getMessage());
         }
+
     }
 }

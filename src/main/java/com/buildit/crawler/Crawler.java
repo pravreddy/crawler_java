@@ -30,14 +30,13 @@ public class Crawler {
         this.jsoupConnection = jsoupConnection;
     }
 
-    public Map<String, List<String>> getSiteMap(String URL)
-            throws IOException {
+    public Map<String, List<String>> getSiteMap(String URL) {
         this.givenURL = URL;
         buildSiteURLMap(URL);
         return siteMap;
     }
 
-    private void buildSiteURLMap(String siteURL) throws IOException
+    private void buildSiteURLMap(String siteURL)
     {
         if(siteMap.get(siteURL) == null) {
             List<String>subURLs = getSubURLs(siteURL);
