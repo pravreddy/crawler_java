@@ -18,11 +18,11 @@ public class Crawler {
     private String givenURL;
     private JsoupConnection jsoupConnection;
     private Map<String,List<String>> siteMap= new HashMap<String,List<String>>();
-    private static String  HTTP ="http";
-    private static String HTTPS="https";
-    private static String WWW="www.";
-    private static String ABS_HREF="abs:href";
-    private static String A_HREF="a[href]";
+    private static final String  HTTP ="http";
+    private static final String HTTPS="https";
+    private static final String WWW="www.";
+    private static final String ABS_HREF="abs:href";
+    private static final String A_HREF="a[href]";
 
 
     public Crawler(JsoupConnection jsoupConnection)
