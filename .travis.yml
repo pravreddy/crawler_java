@@ -1,4 +1,19 @@
 language: java
 jdk:
   - oraclejdk8
-  
+
+env:
+  global:
+   # The next declaration is the encrypted COVERITY_SCAN_TOKEN, created
+   #   via the "travis encrypt" command using the project repo's public key
+   - secure: "f6vT23wxMTVExqhaEY/wegT+eEyz2/gx5AyN+DvtdwYsFt3KDUYyBYJPd742FVnzUhftpNmdKU6J9qicDmxjhfM2jSegJPkj62F4m3hgdksH2PfHgQDVnlqlYAx6EF1XZSVUDT2hAuhsJ0AuYdcBGEM4W0AAOd4Gh3p2DinulzP/z0SKFdwTtaphZkNtS3t/Io7qMScImaZDRYbsxngM3Jcf1Z4BkLharpDR425wX/g106WR93zy3VKWO0npoZdSGlji5+WqrZYbCKQqFtiYISOeR+uKZ1OPrZALc2pepO+DNsNd7sQGSeL/lNh76+4qXgoILoAd8V6MjgqHMwLmX2Lzaip6iAmvMqpFShp9SGybr2xPVK8bNCyAbJ/dEkdb2McPP3tcn41fCOm0rFxdGEirfOINb8zXcuSCFY+jgnUaf8lOKZMG/p8WRJHwm3pue7EuBUJVFtNEWwtklhUHPflyZ2yB6x/fDzR3h0vDv2tbEUIvyeqOGlDduzsFbuFqmYzILPMNh/0A3P/mSHpquMVbAuJd5XezwkeUtzaPztNmfopXrsODXYaIx9tt5Vd6iu/V2/5xwK0qrVxurRgxZNBO1Hs2L7Hl0zD04mYk+u4HQDojQruTVXMK1M5HZO0K6HyYWQ6KMZzaTEY255tJBqwlLDg1lDNrG6EYNFGoN5E="
+
+addons:
+  coverity_scan:
+    project:
+      name: "pravreddy/crawler_java"
+      description: "Build submitted via Travis CI"
+    notification_email: askforpraveen@gmail.com
+    build_command_prepend: "mvn clean"
+    build_command:   "mvn -DskipTests=true compile"
+    branch_pattern: coverity_scan
