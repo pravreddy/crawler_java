@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/pravreddy/crawler_java.svg)](https://travis-ci.org/pravreddy/crawler_java)
 
 <!--[//]: # [![Coverage Status](https://coveralls.io/repos/github/pravreddy/crawler_java/badge.svg?branch=master)](https://coveralls.io/github/pravreddy/crawler_java?branch=master)-->
+[![codecov](https://codecov.io/gh/pravreddy/crawler_java/branch/master/graph/badge.svg)](https://codecov.io/gh/pravreddy/crawler_java)
 
 <a href="https://scan.coverity.com/projects/pravreddy-crawler_java">
   <img alt="Coverity Scan Build Status"
