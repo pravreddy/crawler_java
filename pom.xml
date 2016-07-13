@@ -41,10 +41,17 @@
                     </execution>
                 </executions>
             </plugin>
+            <!-- for codecov.io jacoco plugin -->
             <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>0.7.5.201505241946</version>
+                <configuration>
+                    <excludes>
+                        <exclude>com/buildit/client/CrawlerMain.class</exclude>
+                        <exclude>com/buildit/crawler/*Connection.class</exclude>
+                    </excludes>
+                </configuration>
                 <executions>
                     <execution>
                         <goals>
